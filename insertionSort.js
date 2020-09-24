@@ -9,6 +9,19 @@ let arr2 = [56, 98, 65, 3, 4, 58, 68, 90, 12, 34, 45];
 
 const insertionSort = function(arr) {
 
+    for(i = 1; i < arr.length; i++){
+        let current = arr[i];
+        let position = i;
+
+        while(position > 0 && arr[position-1] > current) {
+                arr[position] = arr[position-1];
+                arr[position-1] = current;
+                position -= 1;
+        }
+
+    }
+
+    return arr;
 };
 
 console.log(insertionSort(arr1));
